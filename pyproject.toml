@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "aconity-ml-test"
+version = "0.1.0"
+description = ""
+authors = ["Cian Hughes <cian.hughes@dcu.ie>"]
+readme = "README.md"
+# packages = [{include = "aconity_ml_test"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+read_layers = { file = "../MTPy/wheels/read_layers-0.1.0-cp311-cp311-manylinux_2_34_x86_64.whl" }
+dask = { extras = ["distributed", "graphviz"], version = "*" }
+pytorch-lightning = "^2.0.6"
+xgboost = "^1.7.6"
+optuna = "^3.2.0"
+wandb = "^0.15.7"
+numba = "^0.57.1"
+tqdm = "^4.65.0"
+matplotlib = "^3.7.2"
+plotly = "^5.15.0"
+bokeh = "^3.2.1"
+holoviews = "^1.17.0"
+datashader = "^0.15.1"
+psutil = "^5.9.5"
+pandas = "^2.0.3"
+tables = "^3.8.0"
+lz4 = "^4.3.2"
+openpyxl = "^3.1.2"
+odfpy = "^1.4.1"
+fsspec = "^2023.6.0"
+jupyterlab = "^4.0.3"
+jupyter = "^1.0.0"
+ipywidgets = "^8.0.7"
+pyarrow = "^12.0.1"
+jupyter-bokeh = "^3.0.7"
+torch = { file = "./wheel/torch-2.0.1+cu118-cp311-cp311-linux_x86_64.whl" }
+optuna-dashboard = "^0.10.3"
+pymysql = "^1.1.0"
+mysqlclient = "^2.2.0"
+tabulate = "^0.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+# [[tool.poetry.source]]
+# name = "nvidia"
+# url = "https://pypi.ngc.nvidia.com"
+# priority = "primary"
